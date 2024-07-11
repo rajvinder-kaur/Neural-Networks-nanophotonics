@@ -25,8 +25,8 @@ def paint_spectra(l,x,y):
     plt.plot(l, y[size-1], color='blue', label= str(x[size-1]))
 
     plt.legend(loc='upper right', bbox_to_anchor=(1.35, 1.0))
-    plt.xlabel("frequency", fontsize=14)
-    plt.ylabel("Cross section (nm)", fontsize=14)
+    plt.xlabel("frequency (THz)", fontsize=14)
+    plt.ylabel("Cross section (nm^2)", fontsize=14)
     plt.tick_params(axis='both', which='major', labelsize=12) 
 
     plt.show()
@@ -88,8 +88,8 @@ def paint_predictions(model,l,x,y,save=False,route='',key=''):
     plt.plot(l, output6.T, color='blue', linestyle='.', label='fit')
 
     plt.legend(loc='upper right', bbox_to_anchor=(1.35, 1.0))
-    plt.xlabel("$Frequency [nm]$", fontsize=14)
-    plt.ylabel("Cross section (nm)", fontsize=14)
+    plt.xlabel("Frequency [THz]", fontsize=14)
+    plt.ylabel("Cross section (nm^2)", fontsize=14)
     plt.tick_params(axis='both', which='major', labelsize=12)
     if save:
         plt.savefig(str(route)+'/train'+str(key)+'.pdf')
