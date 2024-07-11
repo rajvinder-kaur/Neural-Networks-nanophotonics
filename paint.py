@@ -67,7 +67,7 @@ def paint_predictions(model,l,x,y,save=False,route='',key=''):
     output4 = model.predict(input)
     input = np.array([x[int(size/5.*4)]])
     output5 = model.predict(input)
-    input = np.array([x[size-1]])j
+    input = np.array([x[size-1]])
     output6 = model.predict(input)
 
     plt.clf()
@@ -75,17 +75,17 @@ def paint_predictions(model,l,x,y,save=False,route='',key=''):
     # Plot the fits
     plt.figure(1)
     plt.plot(l, y[0], color='black', label='angle = '+str(x[0])+' rad')
-    plt.plot(l, output1.T, color='black', linestyle='--', label='fit')
+    plt.plot(l, output1.T, color='black', linestyle='.', label='fit')
     plt.plot(l, y[int(size/5.),:], color='red', label='angle = '+str(x[int(size/5.)])+' rad')
-    plt.plot(l, output2.T, color='red', linestyle='--', label='fit')
+    plt.plot(l, output2.T, color='red', linestyle='.', label='fit')
     plt.plot(l, y[int(size/5.*2),:], color='green', label='angle = '+str(x[int(size/5.*2)])+' rad')
-    plt.plot(l, output3.T, color='green', linestyle='--', label='fit')
+    plt.plot(l, output3.T, color='green', linestyle='.', label='fit')
     plt.plot(l, y[int(size/5.*3),:], color='cyan', label='angle = '+str(x[int(size/5.*3)])+' rad')
-    plt.plot(l, output4.T, color='cyan', linestyle='--', label='fit')
+    plt.plot(l, output4.T, color='cyan', linestyle='.', label='fit')
     plt.plot(l, y[int(size/5.*4),:], color='orange', label='angle = '+str(x[int(size/5.*4)])+' rad')
-    plt.plot(l, output5.T, color='orange', linestyle='--', label='fit')
+    plt.plot(l, output5.T, color='orange', linestyle='.', label='fit')
     plt.plot(l, y[size-1,:], color='blue', label='angle = '+str(x[size-1])+' rad')
-    plt.plot(l, output6.T, color='blue', linestyle='--', label='fit')
+    plt.plot(l, output6.T, color='blue', linestyle='.', label='fit')
 
     plt.legend(loc='upper right', bbox_to_anchor=(1.35, 1.0))
     plt.xlabel("$Frequency [nm]$", fontsize=14)
