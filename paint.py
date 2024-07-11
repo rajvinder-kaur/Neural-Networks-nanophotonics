@@ -25,7 +25,7 @@ def paint_spectra(l,x,y):
     plt.plot(l, y[size-1], color='blue', label= str(x[size-1]))
 
     plt.legend(loc='upper right', bbox_to_anchor=(1.35, 1.0))
-    plt.xlabel("$Frequency [nm]$", fontsize=14)
+    plt.xlabel("frequency", fontsize=14)
     plt.ylabel("Cross section (nm)", fontsize=14)
     plt.tick_params(axis='both', which='major', labelsize=12) 
 
